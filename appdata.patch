@@ -1,5 +1,5 @@
---- poedit.appdata.xml	2018-09-04 11:26:04.999776287 +0200
-+++ poedit.appdata.xml	2018-09-04 11:02:06.994627385 +0200
+--- a/poedit.appdata.xml	2018-09-04 11:26:04.999776287 +0200
++++ b/poedit.appdata.xml	2018-09-04 11:02:06.994627385 +0200
 @@ -1,31 +1,76 @@
  <?xml version="1.0" encoding="utf-8"?>
 -<components version="0.11">
