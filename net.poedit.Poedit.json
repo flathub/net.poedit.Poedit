@@ -1,21 +1,21 @@
 {
     "app-id": "net.poedit.Poedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "sdk": "org.gnome.Sdk",
     "command": "poedit",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
         "--filesystem=home",
-        /* Network */ 
+        /* LibSecret*/
+        "--talk-name=org.freedesktop.secrets",
+        /* Network */
         "--share=network",
         /* Dconf */
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
-    "rename-appdata-file": "poedit.appdata.xml",
-    "rename-desktop-file": "poedit.desktop",
     "rename-icon": "poedit",
     "cleanup": [
         "/include",
@@ -28,16 +28,19 @@
             "name": "wxWidgets",
             "rm-configure": true,
             "config-opts": [
-                "--with-gtk=3", 
-                "--disable-sdltest", 
-                "--disable-webkit", 
+                "--with-gtk=3",
+                "--disable-sdltest",
+                "--disable-webkit",
                 "--disable-webview",
+                "--enable-debug",
+                "--with-cxx=14",
+                "--enable-stl",
                 "--disable-webviewwebkit"
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.3/wxWidgets-3.0.3.tar.bz2",
-                    "sha256": "08c8033f48ec1b23520f036cde37b5ae925a6a65f137ded665633ca159b9307b"
+                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.1/wxWidgets-3.1.1.tar.bz2",
+                    "sha256": "c925dfe17e8f8b09eb7ea9bfdcfcc13696a3e14e92750effd839f5e10726159e"
                 },
                 {
                     "type": "script",
@@ -88,12 +91,12 @@
             }]
         },
         {
-	        "name": "gettext",
-	        "sources": [{
-	            "type": "archive", 
-	            "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.8.tar.gz",
-	            "sha256": "3da4f6bd79685648ecf46dab51d66fcdddc156f41ed07e580a696a38ac61d48f"
-	        }]
+            "name": "gettext",
+            "sources": [{
+                "type": "archive",
+                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.8.tar.gz",
+                "sha256": "3da4f6bd79685648ecf46dab51d66fcdddc156f41ed07e580a696a38ac61d48f"
+            }]
         },
         {
             "name": "cpprestsdk",
@@ -110,17 +113,16 @@
                 "sha256": "fb0b611007732d8de9528bc37bd67468e7ef371672f89c88f225f73cdc4ffcf1"
             }]
         },
-	"shared-modules/cld2/cld2.json",
+        "shared-modules/cld2/cld2.json",
         {
             "name": "poedit",
             "config-opts": [
                 "--with-boost-libdir=/app/lib"
             ],
-            "sources": [
-                {
+            "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v2.0.6-oss/poedit-2.0.6.tar.gz",
-                    "sha256": "a9e9feee6d65440008ae3fe24504681fe390cb41233122580f503a677989b1bc"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v2.2-oss/poedit-2.2.tar.gz",
+                    "sha256": "bc7048c12cba092a36cf4d960e7ad37eb321e4634b92597a333fc0786821a7eb"
                 }
             ]
         }
