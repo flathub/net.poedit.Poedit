@@ -7,7 +7,7 @@
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
-        "--filesystem=home
+        "--filesystem=home",
         /* LibSecret*/
         "--talk-name=org.freedesktop.secrets",
         /* Network */
