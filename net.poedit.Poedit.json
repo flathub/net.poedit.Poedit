@@ -125,6 +125,14 @@
                     "sha256": "bc7048c12cba092a36cf4d960e7ad37eb321e4634b92597a333fc0786821a7eb"
                 }
             ]
-        }
+        },
+        {
+            "name": "enchant",
+            "sources": [{
+                "type": "archive",
+                "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.3/enchant-2.2.3.tar.gz",
+                "sha256": "abd8e915675cff54c0d4da5029d95c528362266557c61c7149d53fa069b8076d"
+            }]
+        }    
     ]
 }
