@@ -7,7 +7,7 @@
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
-        "--filesystem=home",
+        "--filesystem=home
         /* LibSecret*/
         "--talk-name=org.freedesktop.secrets",
         /* Network */
@@ -61,8 +61,8 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz",
-                "sha256": "bd0df411efd9a585e5a2212275f8762079fed8842264954675a4fddc46cfcf60"
+                "url": "https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.gz",
+                "sha256": "9a2c2819310839ea373f42d69e733c339b4e9a19deab6bfec448281554aa4dbb"
             }]
         },
         {
@@ -110,18 +110,29 @@
             "name": "cpprestsdk",
             "buildsystem": "cmake-ninja",
             "subdir": "Release",
+            "modules": [{
+                "name": "websocketcpp",
+                "buildsystem": "cmake-ninja",
+                "sources": [{
+                    "type": "archive",
+                    "url": "https://github.com/zaphoyd/websocketpp/archive/0.8.1.tar.gz",
+                    "sha256": "178899de48c02853b55b1ea8681599641cedcdfce59e56beaff3dd0874bf0286"
+                }]            
+            }],            
             "build-options": {
                 "config-opts": [
-                    "-DCMAKE_BUILD_TYPE=Release"
+                    "-DCMAKE_BUILD_TYPE=Release",
+                    "-DBUILD_TESTS=OFF",
+                    "-DBUILD_SAMPLES=OFF",
+                    "-DCPPREST_EXCLUDE_WEBSOCKETS=OFF"
                 ]
             },
             "sources": [{
                 "type": "archive",
-                "url": "https://github.com/Microsoft/cpprestsdk/archive/v2.10.2.tar.gz",
-                "sha256": "fb0b611007732d8de9528bc37bd67468e7ef371672f89c88f225f73cdc4ffcf1"
+                "url": "https://github.com/Microsoft/cpprestsdk/archive/v2.10.8.tar.gz",
+                "sha256": "fd79d34b3fad4622ff58480f57ecdf374061c5bdbd83e317019422575c820443"
             }]
         },
-        "shared-modules/cld2/cld2.json",
         {
             "name": "poedit",
             "config-opts": [
