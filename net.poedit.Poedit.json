@@ -16,7 +16,6 @@
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
-    "rename-icon": "poedit",
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
@@ -39,8 +38,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.1/wxWidgets-3.1.1.tar.bz2",
-                    "sha256": "c925dfe17e8f8b09eb7ea9bfdcfcc13696a3e14e92750effd839f5e10726159e"
+                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2",
+                    "sha256": "4cb8d23d70f9261debf7d6cfeca667fc0a7d2b6565adb8f1c484f9b674f1f27a"
                 },
                 {
                     "type": "script",
@@ -129,8 +128,8 @@
             },
             "sources": [{
                 "type": "archive",
-                "url": "https://github.com/Microsoft/cpprestsdk/archive/v2.10.8.tar.gz",
-                "sha256": "fd79d34b3fad4622ff58480f57ecdf374061c5bdbd83e317019422575c820443"
+                "url": "https://github.com/Microsoft/cpprestsdk/archive/v2.10.9.tar.gz",
+                "sha256": "ad2b47577b2311efb9df5fccdac2c809456ab6dd9feab2f655c1e7c70fa31421"
             }]
         },
         {
@@ -140,8 +139,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v2.2-oss/poedit-2.2.tar.gz",
-                    "sha256": "bc7048c12cba092a36cf4d960e7ad37eb321e4634b92597a333fc0786821a7eb"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v2.2.1-oss/poedit-2.2.1.tar.gz",
+                    "sha256": "e28267f3225cd69330b201d22dc2e1175e8fa2706ed52ce19ed68db136b3cbe5"
                 }
             ]
         }    
