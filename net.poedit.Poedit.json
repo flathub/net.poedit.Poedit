@@ -139,8 +139,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v2.2.1-oss/poedit-2.2.1.tar.gz",
-                    "sha256": "e28267f3225cd69330b201d22dc2e1175e8fa2706ed52ce19ed68db136b3cbe5"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v2.2.3-oss/poedit-2.2.3.tar.gz",
+                    "sha256": "47d52895b836a8505742a4f9bf94da5936b244877fac2ff9ab0bb94464548688"
                 }
             ]
         }    
