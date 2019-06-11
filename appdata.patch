@@ -1,0 +1,34 @@
+--- a/net.poedit.Poedit.appdata.xml	2019-05-20 13:39:34.000000000 +0200
++++ b/net.poedit.Poedit.appdata.xml	2019-06-11 12:54:15.360543849 +0200
+@@ -21,6 +21,22 @@
+     <url type="homepage">https://poedit.net</url>
+     <url type="bugtracker">https://github.com/vslavik/poedit</url>
+     <url type="translate">https://crowdin.com/project/poedit</url>
++    <releases>
++        <release version="2.2.3" date="2019-05-20">
++            <description>
++                <ul>
++                    <li>Fixed asserts when compiled against wxGTK 3.0.</li>
++                </ul>
++            </description>
++        </release>
++        <release version="2.2.2" date="2019-05-15">
++            <description>
++                <ul>
++                    <li>Assorted bugfixes.</li>
++                </ul>
++            </description>
++        </release>
++    </releases>
+     <keywords>
+         <keyword>translation</keyword>
+         <keyword>gettext</keyword>
+@@ -34,7 +50,7 @@
+     <provides>
+         <binary>poedit</binary>
+     </provides>
+-
++    <content_rating type="oars-1.1" />
+     <developer_name>Václav Slavík</developer_name>
+     <translation type="gettext">poedit</translation>
+ </component>
