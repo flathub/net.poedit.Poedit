@@ -101,8 +101,8 @@
             "name": "gettext",
             "sources": [{
                 "type": "archive",
-                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.19.8.tar.gz",
-                "sha256": "3da4f6bd79685648ecf46dab51d66fcdddc156f41ed07e580a696a38ac61d48f"
+                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.20.1.tar.gz",
+                "sha256": "66415634c6e8c3fa8b71362879ec7575e27da43da562c798a8a2f223e6e47f5c"
             }]
         },
         {
@@ -139,8 +139,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v2.2.3-oss/poedit-2.2.3.tar.gz",
-                    "sha256": "47d52895b836a8505742a4f9bf94da5936b244877fac2ff9ab0bb94464548688"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v2.2.4-oss/poedit-2.2.4.tar.gz",
+                    "sha256": "c18ee55fbc03d0a25d8260298a9cc489774140e79fe33ad80fcbc34a97df744a"
                 },
                 {
                     "type": "patch",
