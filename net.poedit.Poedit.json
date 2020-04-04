@@ -26,9 +26,6 @@
     "modules": [
         "shared-modules/intltool/intltool-0.51.json",
         {
-          "name": "intltool"
-        },        
-        {
             "name": "wxWidgets",
             "rm-configure": true,
             "config-opts": [
