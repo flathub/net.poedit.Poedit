@@ -135,10 +135,34 @@
             }]
         },
         {
+            "name": "cld2",
+            "buildsystem": "cmake-ninja",
+            "build-options": {
+                "config-opts": [
+                    "-DCMAKE_BUILD_TYPE=Release",
+                    "-DCMAKE_CXX_FLAGS='-std=c++98'"
+                ]
+            },
+            "sources": [{
+                "type": "git",
+                "url": "https://github.com/CLD2Owners/cld2.git",
+                "commit": "b56fa78a2fe44ac2851bae5bf4f4693a0644da7b"
+            }, {
+                "type": "patch",
+                "path": "cld2-add-cmake-file.patch"
+            }]
+        },
+        {
             "name": "poedit",
             "config-opts": [
-                "--with-boost-libdir=/app/lib"
+                "--with-boost-libdir=/app/lib",
+                "--with-cld2"
             ],
+            /* Required for finding cld2, which is not properly installed */
+            "build-options" : {
+                "cppflags": "-I/app/include",
+                "ldflags": "-L/app/lib"
+            },
             "sources": [{
                     "type": "archive",
                     "url": "https://github.com/vslavik/poedit/releases/download/v2.3-oss/poedit-2.3.tar.gz",
