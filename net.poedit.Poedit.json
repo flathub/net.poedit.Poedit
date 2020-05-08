@@ -148,6 +148,10 @@
                     "type": "patch",
                     "path": "appdata.patch"
                 }
+            ],
+            "post-install": [
+                /* Export PoEdit URI handler under allowed name */
+                "mv /app/share/applications/net.poedit.PoeditURI.desktop /app/share/applications/net.poedit.Poedit.URI.desktop"
             ]
         }
     ]
