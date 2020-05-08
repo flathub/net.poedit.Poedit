@@ -116,8 +116,8 @@
                 "buildsystem": "cmake-ninja",
                 "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/zaphoyd/websocketpp/archive/0.8.1.tar.gz",
-                    "sha256": "178899de48c02853b55b1ea8681599641cedcdfce59e56beaff3dd0874bf0286"
+                    "url": "https://github.com/zaphoyd/websocketpp/archive/0.8.2.tar.gz",
+                    "sha256": "6ce889d85ecdc2d8fa07408d6787e7352510750daa66b5ad44aacb47bea76755"
                 }]
             }],
             "build-options": {
@@ -130,8 +130,8 @@
             },
             "sources": [{
                 "type": "archive",
-                "url": "https://github.com/Microsoft/cpprestsdk/archive/v2.10.8.tar.gz",
-                "sha256": "fd79d34b3fad4622ff58480f57ecdf374061c5bdbd83e317019422575c820443"
+                "url": "https://github.com/Microsoft/cpprestsdk/archive/v2.10.16.tar.gz",
+                "sha256": "3d75e17c7d79131320438f2a15331f7ca6281c38c0e2daa27f051e290eeb8681"
             }]
         },
         {
