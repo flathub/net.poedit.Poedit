@@ -1,15 +1,15 @@
---- a/net.poedit.Poedit.appdata.xml	2020-07-27 13:59:02.000000000 +0700
-+++ b/net.poedit.Poedit.appdata.xml	2020-07-27 16:25:14.581914055 +0700
+--- a/net.poedit.Poedit.appdata.xml	2020-08-11 00:38:30.000000000 +0700
++++ b/net.poedit.Poedit.appdata.xml	2020-08-11 21:32:54.209661053 +0700
 @@ -21,6 +21,16 @@
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
 +    <releases>
-+     	<release version="2.4" date="2020-07-27">
++     	<release version="2.4.1" date="2020-08-11">
 +            <description>
 +                <ul>
-+                    <li>Crowdin integration was greatly improved and now supports editing of any kind of localization: files from Crowdin projects, not just POs.</li>
-+                    <li>Improvements to editor user interface.</li>
++                    <li>Upgraded bundled GNU gettext version to 0.21.</li>
++                    <li>Added support for Ruby format strings.</li>
 +                </ul>
 +            </description>
 +        </release>	
@@ -17,12 +17,11 @@
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
-@@ -35,7 +45,7 @@
-     <provides>
+@@ -36,6 +46,7 @@
          <binary>poedit</binary>
      </provides>
--
-+    <content_rating type="oars-1.1" />
+ 
++    <content_rating type="oars-1.1" />   
      <developer_name>Václav Slavík</developer_name>
      <translation type="gettext">poedit</translation>
  </component>

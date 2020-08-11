@@ -165,8 +165,8 @@
             },
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v2.4-oss/poedit-2.4.tar.gz",
-                    "sha256": "b269b23961ddc4f58e41d4dcef4515b38dd4f467fada6cbc30cfee3346bf8cd7"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v2.4.1-oss/poedit-2.4.1.tar.gz",
+                    "sha256": "70143e55c16a88b9b29f48e12b0b9e55714177b60ba367fc29d5fa6dc28429c3"
                 },
                 {
                     "type": "patch",
