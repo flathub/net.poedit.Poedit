@@ -1,27 +1,28 @@
---- a/net.poedit.Poedit.appdata.xml	2020-08-11 00:38:30.000000000 +0700
-+++ b/net.poedit.Poedit.appdata.xml	2020-08-11 21:32:54.209661053 +0700
+--- a/net.poedit.Poedit.appdata.xml	2020-11-10 23:08:59.000000000 +0700
++++ b/net.poedit.Poedit.appdata.xml	2020-11-11 08:08:11.712848927 +0700
 @@ -21,6 +21,16 @@
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
 +    <releases>
-+     	<release version="2.4.1" date="2020-08-11">
++     	<release version="2.4.2" date="2020-10-11">
 +            <description>
 +                <ul>
-+                    <li>Upgraded bundled GNU gettext version to 0.21.</li>
-+                    <li>Added support for Ruby format strings.</li>
++                    <li>Minor improvements to syntax highlighting.</li>
++                    <li>Improved language and placeholders handling in XLIFF.</li>
 +                </ul>
 +            </description>
 +        </release>	
-+    </releases>
++    </releases>    
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
-@@ -36,6 +46,7 @@
+@@ -35,7 +45,7 @@
+     <provides>
          <binary>poedit</binary>
      </provides>
- 
-+    <content_rating type="oars-1.1" />   
+-
++    <content_rating type="oars-1.1" />
      <developer_name>Václav Slavík</developer_name>
      <translation type="gettext">poedit</translation>
  </component>
