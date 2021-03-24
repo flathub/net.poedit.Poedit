@@ -1,7 +1,7 @@
 {
     "app-id": "net.poedit.Poedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "poedit",
     "finish-args": [
@@ -130,8 +130,8 @@
             },
             "sources": [{
                 "type": "archive",
-                "url": "https://github.com/Microsoft/cpprestsdk/archive/v2.10.16.tar.gz",
-                "sha256": "3d75e17c7d79131320438f2a15331f7ca6281c38c0e2daa27f051e290eeb8681"
+                "url": "https://github.com/microsoft/cpprestsdk/archive/refs/tags/2.10.18.tar.gz",
+                "sha256": "6bd74a637ff182144b6a4271227ea8b6b3ea92389f88b25b215e6f94fd4d41cb"
             }]
         },
         {
