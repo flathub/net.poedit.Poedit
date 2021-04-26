@@ -1,23 +1,22 @@
---- a/net.poedit.Poedit.appdata.xml	2020-11-10 23:08:59.000000000 +0700
-+++ b/net.poedit.Poedit.appdata.xml	2020-11-11 08:08:11.712848927 +0700
-@@ -21,6 +21,16 @@
+--- a/net.poedit.Poedit.appdata.xml	2021-04-26 19:41:55.000000000 +0700
++++ b/net.poedit.Poedit.appdata.xml	2021-04-26 20:14:57.894826636 +0700
+@@ -21,6 +21,15 @@
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
 +    <releases>
-+     	<release version="2.4.2" date="2020-10-11">
++     	<release version="2.4.3" date="2021-04-26">
 +            <description>
 +                <ul>
-+                    <li>Minor improvements to syntax highlighting.</li>
-+                    <li>Improved language and placeholders handling in XLIFF.</li>
++                    <li>Bugfixes</li>
 +                </ul>
 +            </description>
 +        </release>	
-+    </releases>    
++    </releases>
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
-@@ -35,7 +45,7 @@
+@@ -35,7 +44,7 @@
      <provides>
          <binary>poedit</binary>
      </provides>
