@@ -1,7 +1,7 @@
 {
     "app-id": "net.poedit.Poedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "poedit",
     "finish-args": [
@@ -120,8 +120,10 @@
                     "sha256": "6ce889d85ecdc2d8fa07408d6787e7352510750daa66b5ad44aacb47bea76755"
                 }]
             }],
+            /* -Wno-format-truncation reported upstream issue #978 */
             "build-options": {
                 "config-opts": [
+                    "-DCMAKE_CXX_FLAGS='-Wno-format-truncation'",
                     "-DCMAKE_BUILD_TYPE=Release",
                     "-DBUILD_TESTS=OFF",
                     "-DBUILD_SAMPLES=OFF",
