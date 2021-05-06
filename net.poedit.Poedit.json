@@ -44,8 +44,7 @@
                     "sha256": "3ca3a19a14b407d0cdda507a7930c2e84ae1c8e74f946e0144d2fa7d881f1a94"
                 },
                 {
-                    "type": "script",
-                    "path": "autogen.sh",
+                    "type": "shell",
                     "commands": [
                         "cp -p /usr/share/automake-*/config.{sub,guess} .",
                         "autoconf -f -B build/autoconf_prepend-include"
@@ -62,7 +61,7 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.gz",
+                "url": "https://boostorg.jfrog.io/artifactory/main/release/1.69.0/source/boost_1_69_0.tar.gz",
                 "sha256": "9a2c2819310839ea373f42d69e733c339b4e9a19deab6bfec448281554aa4dbb"
             }]
         },
