@@ -1,26 +1,32 @@
---- a/net.poedit.Poedit.appdata.xml	2021-04-26 19:41:55.000000000 +0700
-+++ b/net.poedit.Poedit.appdata.xml	2021-04-26 20:14:57.894826636 +0700
-@@ -21,6 +21,15 @@
+--- a/net.poedit.Poedit.appdata.xml	2021-06-04 14:24:58.000000000 +0700
++++ b/net.poedit.Poedit.appdata.xml	2021-06-04 15:39:30.944534534 +0700
+@@ -21,6 +21,22 @@
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
 +    <releases>
-+     	<release version="2.4.3" date="2021-04-26">
++        <release version="3.0" date="2021-06-04">
 +            <description>
 +                <ul>
-+                    <li>Bugfixes</li>
++                    <li>Completely reworked welcome screen.</li>
++                    <li>Modernized user interface and icons.</li>
++                    <li>Much improved opening of recently edited files.</li>
++                    <li>Automatic reloading of files modified outside of Poedit.</li>
++                    <li>Completely new source code occurrences viewers with syntax highlighting for virtually all programming languages used with gettext.</li>
++                    <li>Editing area now indicates source and translation string lengths.</li>
++                    <li>Full python-format support for PO files.</li>
++                    <li>Further improvements to XLIFF handling.</li>                   
 +                </ul>
 +            </description>
-+        </release>	
++        </release>
 +    </releases>
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
-@@ -35,7 +44,7 @@
-     <provides>
+@@ -36,6 +52,7 @@
          <binary>poedit</binary>
      </provides>
--
+ 
 +    <content_rating type="oars-1.1" />
      <developer_name>Václav Slavík</developer_name>
      <translation type="gettext">poedit</translation>
