@@ -1,14 +1,18 @@
---- a/net.poedit.Poedit.appdata.xml	2020-09-30 15:26:54.000000000 +0700
-+++ b/net.poedit.Poedit.appdata.xml	2021-12-11 10:40:49.526106343 +0700
-@@ -21,6 +21,15 @@
+--- a/net.poedit.Poedit.appdata.xml	2022-06-07 22:43:05.000000000 +0700
++++ b/net.poedit.Poedit.appdata.xml	2022-06-08 08:49:15.981218509 +0700
+@@ -21,6 +21,19 @@
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
 +    <releases>
-+        <release version="3.0.1" date="2021-12-11">
++        <release version="3.1" date="2022-06-08">
 +            <description>
 +                <ul>
-+                    <li>Various bugfixes.</li>
++                    <li>Added Go / Previously Edited menu command.</li>
++                    <li>Improved source code viewer performance.</li>
++                    <li>XLIFF: added support for resname/name attributes.</li>
++                    <li>Fixed ID column sizing on some platforms.</li>
++                    <li>Fixed issues with certain rare escape sequences.</li>
 +                </ul>
 +            </description>
 +        </release>
@@ -16,7 +20,7 @@
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
-@@ -36,6 +45,7 @@
+@@ -36,6 +49,7 @@
          <binary>poedit</binary>
      </provides>
  
