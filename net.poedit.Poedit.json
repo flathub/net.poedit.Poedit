@@ -33,7 +33,6 @@
                 "--disable-sdltest",
                 "--enable-webkit",
                 "--enable-webview",
-                "--enable-debug",
                 "--with-cxx=14",
                 "--enable-stl",
                 "--enable-webviewwebkit"
