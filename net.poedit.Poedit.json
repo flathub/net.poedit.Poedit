@@ -57,7 +57,6 @@
             "config-opts": [
                 "--with-gtk=3",
                 "--disable-sdltest",
-                "--enable-webkit",
                 "--enable-webview",
                 "--with-cxx=14",
                 "--enable-stl",
@@ -65,8 +64,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.4/wxWidgets-3.1.4.tar.bz2",
-                    "sha256": "3ca3a19a14b407d0cdda507a7930c2e84ae1c8e74f946e0144d2fa7d881f1a94"
+                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2",
+                    "sha256": "dffcb6be71296fff4b7f8840eb1b510178f57aa2eb236b20da41182009242c02"
                 },
                 {
                     "type": "shell",
@@ -195,8 +194,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v3.1.1-oss/poedit-3.1.1.tar.gz",
-                    "sha256": "8b918a907773cda3fb450e247f3fabec2e221165eab933f1c1269ffc3863a204"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v3.3.1-oss/poedit-3.3.1.tar.gz",
+                    "sha256": "4a8af5c37be152ebab012ebf5c7e21aec3e3c692be34deaf00c78216e901b926"
                 },
                 {
                     "type": "patch",

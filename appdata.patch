@@ -1,10 +1,17 @@
 --- a/net.poedit.Poedit.appdata.xml	2022-02-12 01:42:12.000000000 +0700
 +++ b/net.poedit.Poedit.appdata.xml	2022-07-09 10:56:06.422242821 +0700
-@@ -21,6 +21,15 @@
+@@ -21,6 +21,22 @@
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
 +    <releases>
++        <release version="3.3.1" date="2023-05-16">
++            <description>
++                <ul>
++                    <li>Fixed catalog loosing source language information on update or similar manipulation.</li>
++                </ul>
++            </description>
++        </release>
 +        <release version="3.1.1" date="2022-07-08">
 +            <description>
 +                <ul>
@@ -12,14 +19,14 @@
 +                </ul>
 +            </description>
 +        </release>
-+    </releases>    
++    </releases>
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
-@@ -36,6 +45,7 @@
+@@ -36,6 +45,6 @@
          <binary>poedit</binary>
      </provides>
- 
+-
 +    <content_rating type="oars-1.1" />
      <developer_name>Václav Slavík</developer_name>
      <translation type="gettext">poedit</translation>
