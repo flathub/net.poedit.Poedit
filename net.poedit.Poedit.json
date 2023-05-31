@@ -1,7 +1,7 @@
 {
     "app-id": "net.poedit.Poedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "command": "poedit",
     "finish-args": [
@@ -13,8 +13,7 @@
         /* Network */
         "--share=network",
         /* Dconf */
-        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--metadata=X-DConf=migrate-path=/net/poedit/Poedit/"
     ],
     "cleanup": [
         "/include",
@@ -25,6 +24,33 @@
     ],
     "modules": [
         "shared-modules/intltool/intltool-0.51.json",
+        "shared-modules/libsoup/libsoup-2.4.json",
+        {
+            "name": "webkit2gtk-4.0",
+            "buildsystem": "cmake-ninja",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/share/gir-1.0",
+                "*.a"
+            ],
+            "config-opts": [
+                "-DPORT=GTK",
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DENABLE_BUBBLEWRAP_SANDBOX=OFF",
+                "-DENABLE_DOCUMENTATION=OFF",
+                "-DENABLE_GAMEPAD=OFF",
+                "-DENABLE_WEBDRIVER=OFF",
+                "-DUSE_SOUP2=ON"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://webkitgtk.org/releases/webkitgtk-2.38.6.tar.xz",
+                    "sha256": "1c614c9589389db1a79ea9ba4293bbe8ac3ab0a2234cac700935fae0724ad48b"
+                }
+            ]
+        },
         {
             "name": "wxWidgets",
             "rm-configure": true,
@@ -33,7 +59,6 @@
                 "--disable-sdltest",
                 "--enable-webkit",
                 "--enable-webview",
-                "--enable-debug",
                 "--with-cxx=14",
                 "--enable-stl",
                 "--enable-webviewwebkit"
@@ -61,8 +86,8 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://boostorg.jfrog.io/artifactory/main/release/1.69.0/source/boost_1_69_0.tar.gz",
-                "sha256": "9a2c2819310839ea373f42d69e733c339b4e9a19deab6bfec448281554aa4dbb"
+                "url": "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2",
+                "sha256": "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41"
             }]
         },
         {
@@ -164,6 +189,10 @@
                 "cppflags": "-I/app/include",
                 "ldflags": "-L/app/lib"
             },
+            "post-install": [
+                /* Export PoEdit URI handler under allowed name */
+                "mv /app/share/applications/net.poedit.PoeditURI.desktop /app/share/applications/net.poedit.Poedit.URI.desktop"
+            ],
             "sources": [{
                     "type": "archive",
                     "url": "https://github.com/vslavik/poedit/releases/download/v3.1.1-oss/poedit-3.1.1.tar.gz",
@@ -173,10 +202,6 @@
                     "type": "patch",
                     "path": "appdata.patch"
                 }
-            ],
-            "post-install": [
-                /* Export PoEdit URI handler under allowed name */
-                "mv /app/share/applications/net.poedit.PoeditURI.desktop /app/share/applications/net.poedit.Poedit.URI.desktop"
             ]
         }
     ]
