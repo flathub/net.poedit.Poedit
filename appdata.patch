@@ -1,10 +1,30 @@
 --- a/net.poedit.Poedit.appdata.xml	2022-02-12 01:42:12.000000000 +0700
-+++ b/net.poedit.Poedit.appdata.xml	2022-07-09 10:56:06.422242821 +0700
-@@ -21,6 +21,22 @@
++++ b/net.poedit.Poedit.appdata.xml	2023-10-07 06:50:06.422242821 +0300
+@@ -21,6 +21,45 @@
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
 +    <releases>
++        <release version="3.4" date="2023-10-02">
++            <description>
++                <ul>
++                    <li>Added support for syncing with Localazy translation platform.</li>
++                    <li>Updated bundled GNU gettext to 0.22 and added support for its new features.</li>
++                    <li>Added support for syncing with Localazy translation platform.</li>
++                    <li>[macOS] Support for macOS 14 Sonoma; dropped support for macOS 10.13.</li>
++                    <li>Assorted UI improvements/fixes.</li>
++                </ul>
++            </description>
++        </release>
++        <release version="3.3.2" date="2023-06-26">
++            <description>
++                <ul>
++                    <li>Added support for WebExtension JSON files.</li>
++                    <li>Fixed failure to extract from source code and malformed Plural-Forms warning.</li>
++                    <li>Minor UI fixes.</li>
++                </ul>
++            </description>
++        </release>
 +        <release version="3.3.1" date="2023-05-16">
 +            <description>
 +                <ul>
@@ -12,10 +32,13 @@
 +                </ul>
 +            </description>
 +        </release>
-+        <release version="3.1.1" date="2022-07-08">
++        <release version="3.3" date="2023-05-09">
 +            <description>
 +                <ul>
-+                    <li>Fixed regression where recent files icons would sometimes be broken.</li>
++                    <li>Added support for JSON translation files.</li>
++                    <li>Added support for Flutter ARB translation files.</li>
++                    <li>Added support for XLIFF 2.1.</li>
++                    <li>Added ability to replace source text with another translation.</li>
 +                </ul>
 +            </description>
 +        </release>
