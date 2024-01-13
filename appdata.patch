@@ -1,10 +1,30 @@
 --- a/net.poedit.Poedit.appdata.xml	2022-02-12 01:42:12.000000000 +0700
-+++ b/net.poedit.Poedit.appdata.xml	2023-10-07 06:50:06.422242821 +0300
-@@ -21,6 +21,45 @@
++++ b/net.poedit.Poedit.appdata.xml	2024-01-14 01:50:06.422242821 +0300
+@@ -21,6 +21,39 @@
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
++    <content_rating type="oars-1.1" />
 +    <releases>
++        <release version="3.4.2" date="2023-12-22">
++            <description>
++                <ul>
++                    <li>Compatibility fixes for wxWidgets 3.2 and latest ICU versions.</li>
++                    <li>Updated bundled GNU gettext to 0.22.3.</li>
++                    <li>Assorted UI improvements/fixes.</li>
++                </ul>
++            </description>
++        </release>
++        <release version="3.4.1" date="2023-11-26">
++            <description>
++                <ul>
++                    <li>Improved QA checks for Chinese and Japanese.</li>
++                    <li>Improved handling of multiple 100% matches from the TM as well as search accuracy.</li>
++                    <li>Recognize all ISO 639 languages in the language-setting controls.</li>
++                    <li>Fixed bug in selection handling introduced in 3.4.</li>
++                </ul>
++            </description>
++        </release>
 +        <release version="3.4" date="2023-10-02">
 +            <description>
 +                <ul>
@@ -16,41 +36,7 @@
 +                </ul>
 +            </description>
 +        </release>
-+        <release version="3.3.2" date="2023-06-26">
-+            <description>
-+                <ul>
-+                    <li>Added support for WebExtension JSON files.</li>
-+                    <li>Fixed failure to extract from source code and malformed Plural-Forms warning.</li>
-+                    <li>Minor UI fixes.</li>
-+                </ul>
-+            </description>
-+        </release>
-+        <release version="3.3.1" date="2023-05-16">
-+            <description>
-+                <ul>
-+                    <li>Fixed catalog loosing source language information on update or similar manipulation.</li>
-+                </ul>
-+            </description>
-+        </release>
-+        <release version="3.3" date="2023-05-09">
-+            <description>
-+                <ul>
-+                    <li>Added support for JSON translation files.</li>
-+                    <li>Added support for Flutter ARB translation files.</li>
-+                    <li>Added support for XLIFF 2.1.</li>
-+                    <li>Added ability to replace source text with another translation.</li>
-+                </ul>
-+            </description>
-+        </release>
 +    </releases>
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
-@@ -36,6 +45,6 @@
-         <binary>poedit</binary>
-     </provides>
--
-+    <content_rating type="oars-1.1" />
-     <developer_name>Václav Slavík</developer_name>
-     <translation type="gettext">poedit</translation>
- </component>
