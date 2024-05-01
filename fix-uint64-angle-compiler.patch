@@ -1,0 +1,21 @@
+--- a/Source/ThirdParty/ANGLE/src/compiler/translator/Compiler.cpp
++++ b/Source/ThirdParty/ANGLE/src/compiler/translator/Compiler.cpp
+@@ -7,6 +7,7 @@
+ #include "compiler/translator/Compiler.h"
+ 
+ #include <sstream>
++#include <cstdint>
+ 
+ #include "angle_gl.h"
+ #include "common/utilities.h"
+ 
+--- a/Source/ThirdParty/ANGLE/include/GLSLANG/ShaderVars.h
++++ b/Source/ThirdParty/ANGLE/include/GLSLANG/ShaderVars.h
+@@ -14,6 +14,7 @@
+ #include <array>
+ #include <string>
+ #include <vector>
++#include <cstdint>
+ 
+ // This type is defined here to simplify ANGLE's integration with glslang for SPIR-V.
+ using ShCompileOptions = uint64_t;

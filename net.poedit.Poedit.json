@@ -1,7 +1,7 @@
 {
     "app-id": "net.poedit.Poedit",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "command": "poedit",
     "finish-args": [
@@ -41,13 +41,23 @@
                 "-DENABLE_DOCUMENTATION=OFF",
                 "-DENABLE_GAMEPAD=OFF",
                 "-DENABLE_WEBDRIVER=OFF",
-                "-DUSE_SOUP2=ON"
+                "-DUSE_SOUP2=ON",
+                "-DUSE_WPE_RENDERER=OFF",
+                "-DCMAKE_COMPILE_WARNING_AS_ERROR=OFF"
             ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://webkitgtk.org/releases/webkitgtk-2.38.6.tar.xz",
                     "sha256": "1c614c9589389db1a79ea9ba4293bbe8ac3ab0a2234cac700935fae0724ad48b"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-uint64-angle-compiler.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "disable-webkit2-gi-warn-error.patch"
                 }
             ]
         },
