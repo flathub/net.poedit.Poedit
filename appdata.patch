@@ -1,6 +1,14 @@
---- a/net.poedit.Poedit.appdata.xml	2022-02-12 01:42:12.000000000 +0700
-+++ b/net.poedit.Poedit.appdata.xml	2024-01-14 01:50:06.422242821 +0300
-@@ -21,6 +21,39 @@
+--- a/net.poedit.Poedit.appdata.xml
++++ b/net.poedit.Poedit.appdata.xml
+@@ -14,13 +14,46 @@
+         </p>
+     </description>
+     <screenshots>
+-        <screenshot>
++        <screenshot type="default">
+             <image type="source">https://poedit.net/images/screenshots/linux/poedit-appdata1.png</image>
+         </screenshot>
+     </screenshots>
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
