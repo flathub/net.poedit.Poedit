@@ -1,6 +1,8 @@
+diff --git a/net.poedit.Poedit.appdata.xml b/net.poedit.Poedit.appdata.xml
+index f14feee..89df8e0 100644
 --- a/net.poedit.Poedit.appdata.xml
 +++ b/net.poedit.Poedit.appdata.xml
-@@ -14,13 +14,46 @@
+@@ -14,13 +14,62 @@
          </p>
      </description>
      <screenshots>
@@ -11,9 +13,25 @@
      </screenshots>
      <url type="homepage">https://poedit.net</url>
      <url type="bugtracker">https://github.com/vslavik/poedit</url>
++    <url type="vcs-browser">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
 +    <content_rating type="oars-1.1" />
 +    <releases>
++        <release version="3.4.4" date="2024-05-09">
++            <description>
++                <p>[Windows] Revert back to 32bit GNU gettext bundled binaries.</p>
++            </description>
++        </release>
++        <release version="3.4.3" date="2024-05-08">
++            <description>
++                <ul>
++                    <li>Pass <code>--no-convert</code> to msgfmt with gettext ≥ 0.22 to avoid UTF-8 conversion.</li>
++                    <li>Fixed parsing of <code>@@locale</code> values in ARB files.</li>
++                    <li>Updated bundled GNU gettext to 0.22.5.</li>
++                    <li>Assorted fixes.</li>
++                </ul>
++            </description>
++        </release>
 +        <release version="3.4.2" date="2023-12-22">
 +            <description>
 +                <ul>
@@ -48,3 +66,12 @@
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
+@@ -38,5 +87,8 @@
+     </provides>
+ 
+     <developer_name>Václav Slavík</developer_name>
++    <developer id="net.poedit">
++        <name>Václav Slavík</name>
++    </developer>
+     <translation type="gettext">poedit</translation>
+ </component>

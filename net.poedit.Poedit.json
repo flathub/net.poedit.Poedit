@@ -20,20 +20,37 @@
         "/lib/pkgconfig",
         "/share/aclocal",
         "/share/man",
-        "*.la", "*.a"
+        "/share/doc",
+        "/share/gettext",
+        "/share/gir-1.0",
+        "/share/man",
+        "/share/vala",
+        "*.la",
+        "*.a"
     ],
     "modules": [
         "shared-modules/intltool/intltool-0.51.json",
         "shared-modules/libsoup/libsoup-2.4.json",
         {
+            "name": "unifdef",
+            "no-autogen": true,
+            "make-install-args": [
+                "prefix=${FLATPAK_DEST}"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dotat.at/prog/unifdef/unifdef-2.12.tar.xz",
+                    "sha256": "43ce0f02ecdcdc723b2475575563ddb192e988c886d368260bc0a63aee3ac400"
+                }
+            ],
+            "cleanup": [
+                "*"
+            ]
+        },
+        {
             "name": "webkit2gtk-4.0",
             "buildsystem": "cmake-ninja",
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig",
-                "/share/gir-1.0",
-                "*.a"
-            ],
             "config-opts": [
                 "-DPORT=GTK",
                 "-DCMAKE_BUILD_TYPE=Release",
@@ -41,6 +58,9 @@
                 "-DENABLE_DOCUMENTATION=OFF",
                 "-DENABLE_GAMEPAD=OFF",
                 "-DENABLE_WEBDRIVER=OFF",
+                "-DUSE_GTK4=OFF",
+                "-DUSE_LIBBACKTRACE=OFF",
+                "-DUSE_JPEGXL=OFF",
                 "-DUSE_SOUP2=ON",
                 "-DUSE_WPE_RENDERER=OFF",
                 "-DCMAKE_COMPILE_WARNING_AS_ERROR=OFF"
@@ -48,8 +68,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://webkitgtk.org/releases/webkitgtk-2.38.6.tar.xz",
-                    "sha256": "1c614c9589389db1a79ea9ba4293bbe8ac3ab0a2234cac700935fae0724ad48b"
+                    "url": "https://webkitgtk.org/releases/webkitgtk-2.44.1.tar.xz",
+                    "sha256": "425b1459b0f04d0600c78d1abb5e7edfa3c060a420f8b231e9a6a2d5d29c5561"
                 },
                 {
                     "type": "patch",
@@ -136,8 +156,8 @@
             "name": "gettext",
             "sources": [{
                 "type": "archive",
-                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
-                "sha256": "c77d0da3102aec9c07f43671e60611ebff89a996ef159497ce8e59d075786b12"
+                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.22.5.tar.xz",
+                "sha256": "fe10c37353213d78a5b83d48af231e005c4da84db5ce88037d88355938259640"
             }]
         },
         {
@@ -211,8 +231,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v3.4.2-oss/poedit-3.4.2.tar.gz",
-                    "sha256": "5d64e8aaf92cd016c6cc4623e781b4e7decd85f410b8b289354cb1988282a247"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v3.4.4-oss/poedit-3.4.4.tar.gz",
+                    "sha256": "29cda1611e01af491e0c770a87cd6d24c5ccfe8737dfbc0f2f23847ba0d821ed"
                 },
                 {
                     "type": "patch",
