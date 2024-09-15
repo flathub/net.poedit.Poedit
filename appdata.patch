@@ -1,77 +1,47 @@
+From 11f44cf67c44007da71963723ad61f430f1727b5 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Sun, 15 Sep 2024 22:59:09 +0300
+Subject: [PATCH] appdata: Update appdata
+
+Add missing release information
+---
+ net.poedit.Poedit.appdata.xml | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+
 diff --git a/net.poedit.Poedit.appdata.xml b/net.poedit.Poedit.appdata.xml
-index f14feee..89df8e0 100644
+index 4f53a9f..3899aa7 100644
 --- a/net.poedit.Poedit.appdata.xml
 +++ b/net.poedit.Poedit.appdata.xml
-@@ -14,13 +14,62 @@
-         </p>
-     </description>
-     <screenshots>
--        <screenshot>
-+        <screenshot type="default">
-             <image type="source">https://poedit.net/images/screenshots/linux/poedit-appdata1.png</image>
-         </screenshot>
-     </screenshots>
-     <url type="homepage">https://poedit.net</url>
-     <url type="bugtracker">https://github.com/vslavik/poedit</url>
-+    <url type="vcs-browser">https://github.com/vslavik/poedit</url>
-     <url type="translate">https://crowdin.com/project/poedit</url>
-+    <content_rating type="oars-1.1" />
+@@ -44,4 +44,29 @@
+         <name>Václav Slavík</name>
+     </developer>
+     <translation type="gettext">poedit</translation>
 +    <releases>
-+        <release version="3.4.4" date="2024-05-09">
-+            <description>
-+                <p>[Windows] Revert back to 32bit GNU gettext bundled binaries.</p>
-+            </description>
-+        </release>
-+        <release version="3.4.3" date="2024-05-08">
++        <release version="3.5.1" date="2024-09-15">
 +            <description>
 +                <ul>
-+                    <li>Pass <code>--no-convert</code> to msgfmt with gettext ≥ 0.22 to avoid UTF-8 conversion.</li>
-+                    <li>Fixed parsing of <code>@@locale</code> values in ARB files.</li>
-+                    <li>Updated bundled GNU gettext to 0.22.5.</li>
-+                    <li>Assorted fixes.</li>
++                    <li>Several language-related fixes on Windows and Mac.</li>
++                    <li>Minor visual fixes (alignment, dark mode, blurry icons).</li>
++                    <li>[macOS] Added modern Quick Look preview extension (required on macOS 15).</li>
++                    <li>[Windows] Fixed sorting by translation column.</li>
 +                </ul>
 +            </description>
 +        </release>
-+        <release version="3.4.2" date="2023-12-22">
++        <release version="3.5" date="2024-08-30">
 +            <description>
 +                <ul>
-+                    <li>Compatibility fixes for wxWidgets 3.2 and latest ICU versions.</li>
-+                    <li>Updated bundled GNU gettext to 0.22.3.</li>
-+                    <li>Assorted UI improvements/fixes.</li>
-+                </ul>
-+            </description>
-+        </release>
-+        <release version="3.4.1" date="2023-11-26">
-+            <description>
-+                <ul>
-+                    <li>Improved QA checks for Chinese and Japanese.</li>
-+                    <li>Improved handling of multiple 100% matches from the TM as well as search accuracy.</li>
-+                    <li>Recognize all ISO 639 languages in the language-setting controls.</li>
-+                    <li>Fixed bug in selection handling introduced in 3.4.</li>
-+                </ul>
-+            </description>
-+        </release>
-+        <release version="3.4" date="2023-10-02">
-+            <description>
-+                <ul>
-+                    <li>Added support for syncing with Localazy translation platform.</li>
-+                    <li>Updated bundled GNU gettext to 0.22 and added support for its new features.</li>
-+                    <li>Added support for syncing with Localazy translation platform.</li>
-+                    <li>[macOS] Support for macOS 14 Sonoma; dropped support for macOS 10.13.</li>
-+                    <li>Assorted UI improvements/fixes.</li>
++                    <li>Added a tool to remove same-as-source translations.</li>
++                    <li>Further improvements to JSON support, e.g. better compatiblity with Angular files.</li>
++                    <li>Improved QA checks and editor performance.</li>
++                    <li>Many "plumbing" improvements: upgraded to wxWidgets 3.2, Windows binaries are now 64-bit, system ICU is now used (smaller downloads) etc.</li>
++                    <li>[Windows] Improved support for Windows 11 and modern visuals. Windows 10 is now required.</li>
++                    <li>[Windows] Accessibility improvements with NVDA.</li>
++                    <li>Removed the bookmarks functionality. It was broken by design, only implementable in PO files and is superseded by modern collaboration platforms.</li>
 +                </ul>
 +            </description>
 +        </release>
 +    </releases>
-     <keywords>
-         <keyword>translation</keyword>
-         <keyword>gettext</keyword>
-@@ -38,5 +87,8 @@
-     </provides>
- 
-     <developer_name>Václav Slavík</developer_name>
-+    <developer id="net.poedit">
-+        <name>Václav Slavík</name>
-+    </developer>
-     <translation type="gettext">poedit</translation>
  </component>
+--
+libgit2 1.7.2
+
