@@ -115,7 +115,7 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2",
+                "url": "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2",
                 "sha256": "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41"
             }]
         },
@@ -141,7 +141,7 @@
                 "name": "enchant",
                 "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/AbiWord/enchant/releases/download/v2.3.2/enchant-2.3.2.tar.gz",
+                    "url": "https://github.com/rrthomas/enchant/releases/download/v2.3.2/enchant-2.3.2.tar.gz",
                     "sha256": "ce9ba47fd4d34031bd69445598a698a6611602b2b0e91d705e91a6f5099ead6e"
                 }]
             }],
