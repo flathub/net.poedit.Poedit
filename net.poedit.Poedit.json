@@ -94,8 +94,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.2.1/wxWidgets-3.2.2.1.tar.bz2",
-                    "sha256": "dffcb6be71296fff4b7f8840eb1b510178f57aa2eb236b20da41182009242c02"
+                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.8/wxWidgets-3.2.8.tar.bz2",
+                    "sha256": "c74784904109d7229e6894c85cfa068f1106a4a07c144afd78af41f373ee0fe6"
                 },
                 {
                     "type": "shell",
