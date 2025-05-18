@@ -116,8 +116,9 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2",
-                "sha256": "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41"
+                /* Fixed to 1.84.0 for now because lucene++ that supports boost >= 1.85.0 has not been released yet */
+                "url": "https://archives.boost.io/release/1.84.0/source/boost_1_84_0.tar.bz2",
+                "sha256": "cc4b893acf645c9d4b698e9a0f08ca8846aa5d6c68275c14c3e7949c24109454"
             }]
         },
         {
