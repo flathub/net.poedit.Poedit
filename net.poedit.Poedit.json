@@ -158,8 +158,8 @@
             "name": "gettext",
             "sources": [{
                 "type": "archive",
-                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.22.5.tar.xz",
-                "sha256": "fe10c37353213d78a5b83d48af231e005c4da84db5ce88037d88355938259640"
+                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.25.tar.xz",
+                "sha256": "05240b29f5b0f422e5a4ef8e9b5f76d8fa059cc057693d2723cdb76f36a88ab0"
             }]
         },
         {
