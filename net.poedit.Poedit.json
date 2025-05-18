@@ -6,7 +6,8 @@
     "command": "poedit",
     "finish-args": [
         "--share=ipc",
-        "--socket=x11",
+        "--socket=wayland",
+        "--socket=fallback-x11",
         "--filesystem=home",
         /* LibSecret*/
         "--talk-name=org.freedesktop.secrets",
