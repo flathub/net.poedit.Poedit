@@ -132,8 +132,8 @@
             },
             "sources": [{
                 "type": "archive",
-                "url": "https://github.com/luceneplusplus/LucenePlusPlus/archive/rel_3.0.7.tar.gz",
-                "sha256": "6c19f203311e4b44a0ccf7b1127db77436eb47159ea1c54f7531a0b1ca585e0c"
+                "url": "https://github.com/luceneplusplus/LucenePlusPlus/archive/rel_3.0.9.tar.gz",
+                "sha256": "4e69e29d5d79a976498ef71eab70c9c88c7014708be4450a9fda7780fe93584e"
             }]
         },
         {
