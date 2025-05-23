@@ -105,14 +105,6 @@
         },
         {
             "name": "gtkspell",
-            "modules": [{
-                "name": "enchant",
-                "sources": [{
-                    "type": "archive",
-                    "url": "https://github.com/rrthomas/enchant/releases/download/v2.8.4/enchant-2.8.4.tar.gz",
-                    "sha256": "e28f98208df5f99320d6a05cd49f83420bf71e69052debe3b343c9bb15c833ed"
-                }]
-            }],
             "cleanup": ["*.la", "/share/gtk-doc"],
             "sources": [{
                 "type": "archive",
