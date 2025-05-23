@@ -1,64 +1,44 @@
 diff --git a/net.poedit.Poedit.appdata.xml b/net.poedit.Poedit.appdata.xml
-index f14feee..89df8e0 100644
+index 4f53a9f2b..5136a4612 100644
 --- a/net.poedit.Poedit.appdata.xml
 +++ b/net.poedit.Poedit.appdata.xml
-@@ -14,13 +14,62 @@
-         </p>
-     </description>
-     <screenshots>
--        <screenshot>
-+        <screenshot type="default">
-             <image type="source">https://poedit.net/images/screenshots/linux/poedit-appdata1.png</image>
-         </screenshot>
-     </screenshots>
-     <url type="homepage">https://poedit.net</url>
-     <url type="bugtracker">https://github.com/vslavik/poedit</url>
-+    <url type="vcs-browser">https://github.com/vslavik/poedit</url>
+@@ -23,6 +23,43 @@
+     <url type="vcs-browser">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
-+    <content_rating type="oars-1.1" />
+     <content_rating type="oars-1.1" />
 +    <releases>
-+        <release version="3.4.4" date="2024-05-09">
++        <release version="3.6.3" date="2025-05-16">
 +            <description>
-+                <p>[Windows] Revert back to 32bit GNU gettext bundled binaries.</p>
++                <p>Fixes regression in XLIFF 1.2 state handling introduced in 3.6.2.</p>
 +            </description>
 +        </release>
-+        <release version="3.4.3" date="2024-05-08">
++        <release version="3.6.2" date="2025-05-08">
 +            <description>
 +                <ul>
-+                    <li>Pass <code>--no-convert</code> to msgfmt with gettext ≥ 0.22 to avoid UTF-8 conversion.</li>
-+                    <li>Fixed parsing of <code>@@locale</code> values in ARB files.</li>
-+                    <li>Updated bundled GNU gettext to 0.22.5.</li>
-+                    <li>Assorted fixes.</li>
++                    <li>Improved XLIFF 1.2 compatibility with Xcode.</li>
++                    <li>[Windows] Fixed crash due to a msvcp140.dll binary breakage.</li>
++                    <li>Bugfixes.</li>
 +                </ul>
 +            </description>
 +        </release>
-+        <release version="3.4.2" date="2023-12-22">
++        <release version="3.6.1" date="2025-04-15">
 +            <description>
 +                <ul>
-+                    <li>Compatibility fixes for wxWidgets 3.2 and latest ICU versions.</li>
-+                    <li>Updated bundled GNU gettext to 0.22.3.</li>
-+                    <li>Assorted UI improvements/fixes.</li>
++                    <li>Fix incorrect msgmerge --no-fuzzy-matching invocation (https://github.com/vslavik/poedit/issues/886).</li>
++                    <li>Recognize Shopify-style en.default.json files.</li>
++                    <li>Fix uploading of same-as-source translations to Crowdin.</li>
 +                </ul>
 +            </description>
 +        </release>
-+        <release version="3.4.1" date="2023-11-26">
++        <release version="3.6" date="2025-03-31">
 +            <description>
 +                <ul>
-+                    <li>Improved QA checks for Chinese and Japanese.</li>
-+                    <li>Improved handling of multiple 100% matches from the TM as well as search accuracy.</li>
-+                    <li>Recognize all ISO 639 languages in the language-setting controls.</li>
-+                    <li>Fixed bug in selection handling introduced in 3.4.</li>
-+                </ul>
-+            </description>
-+        </release>
-+        <release version="3.4" date="2023-10-02">
-+            <description>
-+                <ul>
-+                    <li>Added support for syncing with Localazy translation platform.</li>
-+                    <li>Updated bundled GNU gettext to 0.22 and added support for its new features.</li>
-+                    <li>Added support for syncing with Localazy translation platform.</li>
-+                    <li>[macOS] Support for macOS 14 Sonoma; dropped support for macOS 10.13.</li>
-+                    <li>Assorted UI improvements/fixes.</li>
++                    <li>Support for Apple XCLOC localization bundles.</li>
++                    <li>Significantly improved updating and merging UI, with detailed changes reporting and error handling.</li>
++                    <li>Long-running operations such as export/import now all report progress.</li>
++                    <li>Added Serbian (Latin) and Uyghur translations.</li>
++                    <li>Performance and UI responsiveness improvements.</li>
++                    <li>Updated bundled GNU gettext to 0.23.1.</li>
 +                </ul>
 +            </description>
 +        </release>
@@ -66,12 +46,3 @@ index f14feee..89df8e0 100644
      <keywords>
          <keyword>translation</keyword>
          <keyword>gettext</keyword>
-@@ -38,5 +87,8 @@
-     </provides>
- 
-     <developer_name>Václav Slavík</developer_name>
-+    <developer id="net.poedit">
-+        <name>Václav Slavík</name>
-+    </developer>
-     <translation type="gettext">poedit</translation>
- </component>
