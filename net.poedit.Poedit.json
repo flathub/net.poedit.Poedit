@@ -31,7 +31,6 @@
     ],
     "modules": [
         "shared-modules/intltool/intltool-0.51.json",
-        "shared-modules/libsoup/libsoup-2.4.json",
         {
             "name": "unifdef",
             "no-autogen": true,
@@ -47,39 +46,6 @@
             ],
             "cleanup": [
                 "*"
-            ]
-        },
-        {
-            "name": "webkit2gtk-4.0",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DPORT=GTK",
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DENABLE_BUBBLEWRAP_SANDBOX=OFF",
-                "-DENABLE_DOCUMENTATION=OFF",
-                "-DENABLE_GAMEPAD=OFF",
-                "-DENABLE_WEBDRIVER=OFF",
-                "-DUSE_GTK4=OFF",
-                "-DUSE_LIBBACKTRACE=OFF",
-                "-DUSE_JPEGXL=OFF",
-                "-DUSE_SOUP2=ON",
-                "-DUSE_WPE_RENDERER=OFF",
-                "-DCMAKE_COMPILE_WARNING_AS_ERROR=OFF"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://webkitgtk.org/releases/webkitgtk-2.44.1.tar.xz",
-                    "sha256": "425b1459b0f04d0600c78d1abb5e7edfa3c060a420f8b231e9a6a2d5d29c5561"
-                },
-                {
-                    "type": "patch",
-                    "path": "fix-uint64-angle-compiler.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "disable-webkit2-gi-warn-error.patch"
-                }
             ]
         },
         {
