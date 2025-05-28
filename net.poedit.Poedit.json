@@ -6,7 +6,8 @@
     "command": "poedit",
     "finish-args": [
         "--share=ipc",
-        "--socket=x11",
+        "--socket=wayland",
+        "--socket=fallback-x11",
         "--filesystem=home",
         /* LibSecret*/
         "--talk-name=org.freedesktop.secrets",
@@ -30,57 +31,6 @@
     ],
     "modules": [
         "shared-modules/intltool/intltool-0.51.json",
-        "shared-modules/libsoup/libsoup-2.4.json",
-        {
-            "name": "unifdef",
-            "no-autogen": true,
-            "make-install-args": [
-                "prefix=${FLATPAK_DEST}"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://dotat.at/prog/unifdef/unifdef-2.12.tar.xz",
-                    "sha256": "43ce0f02ecdcdc723b2475575563ddb192e988c886d368260bc0a63aee3ac400"
-                }
-            ],
-            "cleanup": [
-                "*"
-            ]
-        },
-        {
-            "name": "webkit2gtk-4.0",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DPORT=GTK",
-                "-DCMAKE_BUILD_TYPE=Release",
-                "-DENABLE_BUBBLEWRAP_SANDBOX=OFF",
-                "-DENABLE_DOCUMENTATION=OFF",
-                "-DENABLE_GAMEPAD=OFF",
-                "-DENABLE_WEBDRIVER=OFF",
-                "-DUSE_GTK4=OFF",
-                "-DUSE_LIBBACKTRACE=OFF",
-                "-DUSE_JPEGXL=OFF",
-                "-DUSE_SOUP2=ON",
-                "-DUSE_WPE_RENDERER=OFF",
-                "-DCMAKE_COMPILE_WARNING_AS_ERROR=OFF"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://webkitgtk.org/releases/webkitgtk-2.44.1.tar.xz",
-                    "sha256": "425b1459b0f04d0600c78d1abb5e7edfa3c060a420f8b231e9a6a2d5d29c5561"
-                },
-                {
-                    "type": "patch",
-                    "path": "fix-uint64-angle-compiler.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "disable-webkit2-gi-warn-error.patch"
-                }
-            ]
-        },
         {
             "name": "wxWidgets",
             "rm-configure": true,
@@ -115,8 +65,9 @@
             ],
             "sources": [{
                 "type": "archive",
-                "url": "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2",
-                "sha256": "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41"
+                /* Fixed to 1.84.0 for now because lucene++ that supports boost >= 1.85.0 has not been released yet */
+                "url": "https://archives.boost.io/release/1.84.0/source/boost_1_84_0.tar.bz2",
+                "sha256": "cc4b893acf645c9d4b698e9a0f08ca8846aa5d6c68275c14c3e7949c24109454"
             }]
         },
         {
@@ -131,20 +82,12 @@
             },
             "sources": [{
                 "type": "archive",
-                "url": "https://github.com/luceneplusplus/LucenePlusPlus/archive/rel_3.0.7.tar.gz",
-                "sha256": "6c19f203311e4b44a0ccf7b1127db77436eb47159ea1c54f7531a0b1ca585e0c"
+                "url": "https://github.com/luceneplusplus/LucenePlusPlus/archive/rel_3.0.9.tar.gz",
+                "sha256": "4e69e29d5d79a976498ef71eab70c9c88c7014708be4450a9fda7780fe93584e"
             }]
         },
         {
             "name": "gtkspell",
-            "modules": [{
-                "name": "enchant",
-                "sources": [{
-                    "type": "archive",
-                    "url": "https://github.com/rrthomas/enchant/releases/download/v2.3.2/enchant-2.3.2.tar.gz",
-                    "sha256": "ce9ba47fd4d34031bd69445598a698a6611602b2b0e91d705e91a6f5099ead6e"
-                }]
-            }],
             "cleanup": ["*.la", "/share/gtk-doc"],
             "sources": [{
                 "type": "archive",
@@ -156,8 +99,8 @@
             "name": "gettext",
             "sources": [{
                 "type": "archive",
-                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.22.5.tar.xz",
-                "sha256": "fe10c37353213d78a5b83d48af231e005c4da84db5ce88037d88355938259640"
+                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.25.tar.xz",
+                "sha256": "05240b29f5b0f422e5a4ef8e9b5f76d8fa059cc057693d2723cdb76f36a88ab0"
             }]
         },
         {
@@ -187,8 +130,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/microsoft/cpprestsdk/archive/refs/tags/2.10.18.tar.gz",
-                    "sha256": "6bd74a637ff182144b6a4271227ea8b6b3ea92389f88b25b215e6f94fd4d41cb"
+                    "url": "https://github.com/microsoft/cpprestsdk/archive/refs/tags/v2.10.19.tar.gz",
+                    "sha256": "4b0d14e5bfe77ce419affd253366e861968ae6ef2c35ae293727c1415bd145c8"
                 },
                 {
                     "type": "patch",
@@ -231,8 +174,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v3.4.4-oss/poedit-3.4.4.tar.gz",
-                    "sha256": "29cda1611e01af491e0c770a87cd6d24c5ccfe8737dfbc0f2f23847ba0d821ed"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v3.6.3-oss/poedit-3.6.3.tar.gz",
+                    "sha256": "e516d44a8a0c715f2d69ae8fd37b30b46efd39b8e5c99e704331f1c91ef679bd"
                 },
                 {
                     "type": "patch",
