@@ -44,8 +44,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.8/wxWidgets-3.2.8.tar.bz2",
-                    "sha256": "c74784904109d7229e6894c85cfa068f1106a4a07c144afd78af41f373ee0fe6"
+                    "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.8.1/wxWidgets-3.2.8.1.tar.bz2",
+                    "sha256": "ad0cf6c18815dcf1a6a89ad3c3d21a306cd7b5d99a602f77372ef1d92cb7d756"
                 },
                 {
                     "type": "shell",
@@ -99,8 +99,8 @@
             "name": "gettext",
             "sources": [{
                 "type": "archive",
-                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.25.tar.xz",
-                "sha256": "05240b29f5b0f422e5a4ef8e9b5f76d8fa059cc057693d2723cdb76f36a88ab0"
+                "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.26.tar.xz",
+                "sha256": "d1fb86e260cfe7da6031f94d2e44c0da55903dbae0a2fa0fae78c91ae1b56f00"
             }]
         },
         {
@@ -174,8 +174,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v3.6.3-oss/poedit-3.6.3.tar.gz",
-                    "sha256": "e516d44a8a0c715f2d69ae8fd37b30b46efd39b8e5c99e704331f1c91ef679bd"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v3.7-oss/poedit-3.7.tar.gz",
+                    "sha256": "1bb2388f03618991effde4e8d0e8c35db363af6ca58f6d8ebab21daa76731d71"
                 },
                 {
                     "type": "patch",
