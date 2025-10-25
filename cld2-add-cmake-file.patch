@@ -1,19 +1,39 @@
-Description: Add a cmake file to properly handle the source files
+From 9cfac02c2ac7802ab7079560b38a474473c45f51 Mon Sep 17 00:00:00 2001
+From: tastytea <tastytea@tastytea.de>
+Date: Sat, 22 May 2021 07:54:59 +0200
+Subject: [PATCH] Add a cmake file to properly handle the source files.
+
+Changes from to the original patch:
+  - Set the standard to C++98
+  - Use correct installation directory for libraries
+
+The last recorded SVN revision in the git log is 196, Debian uses
+0.0.197 as version for their 2015-08-06 snapshot. The only change since
+then was a typo in the readme, so I'm keeping the version.
 
 Author: Gianfranco Costamagna <costamagnagianfranco@yahoo.it>
 Forwarded: https://github.com/CLD2Owners/cld2/issues/29
-Forwarded: Debian source package cld2-0.0.0-git20150806
+Forwarded: https://sources.debian.org/src/cld2/0.0.0-git20150806-9/debian/patches/add-cmake-file.patch/
+Closes: https://github.com/CLD2Owners/cld2/issues/29
+---
+ CMakeLists.txt | 158 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 158 insertions(+)
+ create mode 100644 CMakeLists.txt
 
-Index: cld2-0.0.0~svn194/CMakeLists.txt
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ cld2-0.0.0~svn194/CMakeLists.txt	2015-03-30 16:29:14.318639846 +0200
-@@ -0,0 +1,155 @@
-+cmake_minimum_required(VERSION 2.8)
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+index 0000000..d853904
+--- /dev/null
++++ b/CMakeLists.txt
+@@ -0,0 +1,158 @@
++cmake_minimum_required(VERSION 3.0)
 +project (cld2)
 +enable_language(CXX)
-+
++set(CMAKE_CXX_STANDARD 98)
 +set (VERSION "0.0.197")
++
++include(GNUInstallDirs)
++
 +set (common_SOURCE_FILES
 +    internal/cldutil.cc
 +    internal/cldutil_shared.cc
@@ -21,7 +41,7 @@ Index: cld2-0.0.0~svn194/CMakeLists.txt
 +    internal/compact_lang_det_hint_code.cc
 +    internal/compact_lang_det_impl.cc
 +    internal/debug.cc
-+    internal/fixunicodevalue.cc 
++    internal/fixunicodevalue.cc
 +    internal/generated_entities.cc
 +    internal/generated_language.cc
 +    internal/generated_ulscript.cc
@@ -83,9 +103,9 @@ Index: cld2-0.0.0~svn194/CMakeLists.txt
 +  SOVERSION 0
 +  COMPILE_FLAGS "-DCLD2_DYNAMIC_MODE"
 +  )
-+install(TARGETS cld2 DESTINATION lib)
-+install(TARGETS cld2_full DESTINATION lib)
-+install(TARGETS cld2_dynamic DESTINATION lib)
++install(TARGETS cld2 LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
++install(TARGETS cld2_full LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
++install(TARGETS cld2_dynamic LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 +
 +set (cld2_internal_HEADERS
 +    internal/cld2_dynamic_compat.h
@@ -164,3 +184,6 @@ Index: cld2-0.0.0~svn194/CMakeLists.txt
 +target_link_libraries(compact_lang_det_test_chrome_16 cld2)
 +target_link_libraries(cld2_unittest_chrome_2 cld2)
 +target_link_libraries(cld2_unittest_avoid_chrome_2 cld2)
+-- 
+2.51.0
+

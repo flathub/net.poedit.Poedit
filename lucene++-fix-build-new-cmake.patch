@@ -1,0 +1,123 @@
+From 8d25aa9f16403f784afc684b62d4067f32611f31 Mon Sep 17 00:00:00 2001
+From: Ryo Nakano <ryonakaknock3@gmail.com>
+Date: Sat, 25 Oct 2025 10:22:44 +0900
+Subject: [PATCH] Fix build new cmake
+
+Co-authored-by: Gianfranco Costamagna <locutusofborg@debian.org>
+---
+ CMakeLists.txt                           | 6 +++---
+ cmake/cotire.cmake                       | 2 +-
+ src/test/CMakeLists.txt                  | 6 ++++--
+ src/test/gtest/CMakeLists.txt            | 6 +++---
+ src/test/gtest/googlemock/CMakeLists.txt | 2 +-
+ src/test/gtest/googletest/CMakeLists.txt | 2 +-
+ 6 files changed, 13 insertions(+), 11 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5c0fc02..7ce313c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,7 +2,7 @@
+ # init
+ ####################################
+ 
+-cmake_minimum_required(VERSION 3.5)
++cmake_minimum_required(VERSION 3.10)
+ 
+ project(lucene++)
+ 
+@@ -46,8 +46,8 @@ include(dependencies)
+ # build docs
+ include(Lucene++Docs)
+ 
+-# Enable C++11
+-set(CMAKE_CXX_STANDARD 11)
++# Enable C++17
++set(CMAKE_CXX_STANDARD 17)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ 
+ ####################################
+diff --git a/cmake/cotire.cmake b/cmake/cotire.cmake
+index 9a4982d..071d7b2 100644
+--- a/cmake/cotire.cmake
++++ b/cmake/cotire.cmake
+@@ -37,7 +37,7 @@ set(__COTIRE_INCLUDED TRUE)
+ if (NOT CMAKE_SCRIPT_MODE_FILE)
+ 	cmake_policy(PUSH)
+ endif()
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.10)
+ if (NOT CMAKE_SCRIPT_MODE_FILE)
+ 	cmake_policy(POP)
+ endif()
+diff --git a/src/test/CMakeLists.txt b/src/test/CMakeLists.txt
+index f0b9b7e..7909d87 100644
+--- a/src/test/CMakeLists.txt
++++ b/src/test/CMakeLists.txt
+@@ -8,8 +8,10 @@ if(MSVC)
+   set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+ endif()
+ 
+-add_subdirectory(gtest)
+-
++find_package(GTest)
++if(NOT GTEST_FOUND)
++  add_subdirectory(gtest)
++endif()
+ 
+ ####################################
+ # src
+diff --git a/src/test/gtest/CMakeLists.txt b/src/test/gtest/CMakeLists.txt
+index f11bbb5..a451d0b 100644
+--- a/src/test/gtest/CMakeLists.txt
++++ b/src/test/gtest/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ # Note: CMake support is community-based. The maintainers do not use CMake
+ # internally.
+ 
+-cmake_minimum_required(VERSION 2.8.8)
++cmake_minimum_required(VERSION 3.10)
+ 
+ if (POLICY CMP0048)
+   cmake_policy(SET CMP0048 NEW)
+@@ -11,9 +11,9 @@ project(googletest-distribution)
+ set(GOOGLETEST_VERSION 1.10.0)
+ 
+ if (CMAKE_VERSION VERSION_LESS "3.1")
+-  add_definitions(-std=c++11)
++  add_definitions(-std=c++17)
+ else()
+-  set(CMAKE_CXX_STANDARD 11)
++  set(CMAKE_CXX_STANDARD 17)
+   set(CMAKE_CXX_STANDARD_REQUIRED ON)
+   if(NOT CYGWIN)
+     set(CMAKE_CXX_EXTENSIONS OFF)
+diff --git a/src/test/gtest/googlemock/CMakeLists.txt b/src/test/gtest/googlemock/CMakeLists.txt
+index d32b70b..838ee9b 100644
+--- a/src/test/gtest/googlemock/CMakeLists.txt
++++ b/src/test/gtest/googlemock/CMakeLists.txt
+@@ -42,7 +42,7 @@ else()
+   cmake_policy(SET CMP0048 NEW)
+   project(gmock VERSION ${GOOGLETEST_VERSION} LANGUAGES CXX C)
+ endif()
+-cmake_minimum_required(VERSION 2.6.4)
++cmake_minimum_required(VERSION 3.10)
+ 
+ if (COMMAND set_up_hermetic_build)
+   set_up_hermetic_build()
+diff --git a/src/test/gtest/googletest/CMakeLists.txt b/src/test/gtest/googletest/CMakeLists.txt
+index db29294..8d6b071 100644
+--- a/src/test/gtest/googletest/CMakeLists.txt
++++ b/src/test/gtest/googletest/CMakeLists.txt
+@@ -53,7 +53,7 @@ else()
+   cmake_policy(SET CMP0048 NEW)
+   project(gtest VERSION ${GOOGLETEST_VERSION} LANGUAGES CXX C)
+ endif()
+-cmake_minimum_required(VERSION 2.6.4)
++cmake_minimum_required(VERSION 3.10)
+ 
+ if (POLICY CMP0063) # Visibility
+   cmake_policy(SET CMP0063 NEW)
+-- 
+2.51.0
+

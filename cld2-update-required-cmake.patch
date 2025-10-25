@@ -1,0 +1,22 @@
+From 4bebfda8de6cf55ed761c171aa3551b8a8ecc078 Mon Sep 17 00:00:00 2001
+From: Ryo Nakano <ryonakaknock3@gmail.com>
+Date: Sat, 25 Oct 2025 11:26:28 +0900
+Subject: [PATCH] Bump CMake minimum required version to 3.10
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d853904..2d056c0 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.0)
++cmake_minimum_required(VERSION 3.10)
+ project (cld2)
+ enable_language(CXX)
+ set(CMAKE_CXX_STANDARD 98)
+-- 
+2.51.0
+

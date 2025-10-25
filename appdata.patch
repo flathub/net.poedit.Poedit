@@ -1,21 +1,17 @@
 diff --git a/net.poedit.Poedit.appdata.xml b/net.poedit.Poedit.appdata.xml
-index 4f53a9f2b..deba18682 100644
+index 4f53a9f2b..fda510ba8 100644
 --- a/net.poedit.Poedit.appdata.xml
 +++ b/net.poedit.Poedit.appdata.xml
-@@ -23,6 +23,20 @@
+@@ -23,6 +23,16 @@
      <url type="vcs-browser">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
      <content_rating type="oars-1.1" />
 +    <releases>
-+        <release version="3.7" date="2025-08-21">
++        <release version="3.8" date="2025-10-15">
 +            <description>
 +                <ul>
-+                    <li>Added support for Microsoft RESX files.</li>
-+                    <li>Added support for Qt Linguist (.ts) files.</li>
-+                    <li>Added support for, and updated bundled version to, GNU gettext 0.26.</li>
-+                    <li>Added support for additional programming languages in source code extraction: Rust, TypeScript, Go and D (with gettext 0.26).</li>
-+                    <li>Modernized toolbars on all platforms.</li>
-+                    <li>Other bugfixes and minor UI improvements.</li>
++                    <li>Added support for macOS 26 Tahoe. Dropped support for macOS versions older than 11.</li>
++                    <li>Added toolbar icons for Ubuntu's Yaru theme.</li>
 +                </ul>
 +            </description>
 +        </release>
