@@ -116,7 +116,7 @@
             "buildsystem": "cmake-ninja",
             "subdir": "Release",
             "modules": [{
-                "name": "websocketcpp",
+                "name": "websocketpp",
                 "buildsystem": "cmake-ninja",
                 "sources": [{
                     "type": "archive",
@@ -125,7 +125,7 @@
                 },
                 {
                     "type": "patch",
-                    "path": "websocketcpp-update-required-cmake.patch"
+                    "path": "websocketpp-update-required-cmake.patch"
                 }]
             }],
             /* -Wno-format-truncation reported upstream issue #978 */
