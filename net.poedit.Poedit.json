@@ -189,8 +189,8 @@
             ],
             "sources": [{
                     "type": "archive",
-                    "url": "https://github.com/vslavik/poedit/releases/download/v3.8.1-oss/poedit-3.8.1.tar.gz",
-                    "sha256": "25d56d48a196d9f18d8de6ec3eeaad216f1a741bcea9769d44b8ee2d87dda9a8"
+                    "url": "https://github.com/vslavik/poedit/releases/download/v3.8.2-oss/poedit-3.8.2.tar.gz",
+                    "sha256": "118adbf8114bedb182568ba9c8bdf97bb235ca84e6b963831cb9bfe741376bff"
                 },
                 {
                     "type": "patch",
