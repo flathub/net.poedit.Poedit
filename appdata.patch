@@ -1,12 +1,20 @@
 diff --git a/net.poedit.Poedit.appdata.xml b/net.poedit.Poedit.appdata.xml
-index 4f53a9f2b..fc7a49570 100644
+index 4f53a9f2b..23cbfde31 100644
 --- a/net.poedit.Poedit.appdata.xml
 +++ b/net.poedit.Poedit.appdata.xml
-@@ -23,6 +23,24 @@
+@@ -23,6 +23,32 @@
      <url type="vcs-browser">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
      <content_rating type="oars-1.1" />
 +    <releases>
++        <release version="3.8.2" date="2026-02-26">
++            <description>
++                <ul>
++                    <li>Tweaked TM scoring to penalize length mismatch.</li>
++                    <li>Fixed handling of absolute file references.</li>
++                </ul>
++            </description>
++        </release>
 +        <release version="3.8.1" date="2026-01-13">
 +            <description>
 +                <ul>
