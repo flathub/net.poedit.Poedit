@@ -1,33 +1,18 @@
 diff --git a/net.poedit.Poedit.appdata.xml b/net.poedit.Poedit.appdata.xml
-index 4f53a9f2b..23cbfde31 100644
+index 4f53a9f2b..6020b3424 100644
 --- a/net.poedit.Poedit.appdata.xml
 +++ b/net.poedit.Poedit.appdata.xml
-@@ -23,6 +23,32 @@
+@@ -23,6 +23,17 @@
      <url type="vcs-browser">https://github.com/vslavik/poedit</url>
      <url type="translate">https://crowdin.com/project/poedit</url>
      <content_rating type="oars-1.1" />
 +    <releases>
-+        <release version="3.8.2" date="2026-02-26">
++        <release version="3.9" date="2026-03-10">
 +            <description>
 +                <ul>
-+                    <li>Tweaked TM scoring to penalize length mismatch.</li>
-+                    <li>Fixed handling of absolute file references.</li>
-+                </ul>
-+            </description>
-+        </release>
-+        <release version="3.8.1" date="2026-01-13">
-+            <description>
-+                <ul>
-+                    <li>Improved lookup of other translations based on filenames.</li>
-+                    <li>Bugfixes.</li>
-+                </ul>
-+            </description>
-+        </release>
-+        <release version="3.8" date="2025-10-15">
-+            <description>
-+                <ul>
-+                    <li>Added support for macOS 26 Tahoe. Dropped support for macOS versions older than 11.</li>
-+                    <li>Added toolbar icons for Ubuntu's Yaru theme.</li>
++                    <li>Added QA check for very different string lengths and violations of XLIFF min/maxwidth constraints.</li>
++                    <li>Reduced QA checks false positives for case mismatch.</li>
++                    <li>Misc bugfixes.</li>
 +                </ul>
 +            </description>
 +        </release>
