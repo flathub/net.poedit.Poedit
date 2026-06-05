@@ -1,5 +1,5 @@
 {
-    "app-id": "net.poedit.Poedit",
+    "id": "net.poedit.Poedit",
     "runtime": "org.gnome.Platform",
     "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
