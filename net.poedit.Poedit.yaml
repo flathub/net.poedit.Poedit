@@ -45,13 +45,27 @@ modules:
       - type: shell
         commands:
           - 'cp -p /usr/share/automake-*/config.{sub,guess} .'
-          - 'autoconf -f -B build/autoconf_prepend-include'
+          - autoconf -f -B build/autoconf_prepend-include
 
   - name: boost
     buildsystem: simple
     build-commands:
       - ./bootstrap.sh
-      - ./b2 install --prefix=/app --with-filesystem --with-date_time --with-regex --with-thread --with-system --with-random --with-iostreams --with-chrono --with-atomic define='BOOST_SYSTEM_NO_DEPRECATED' -sNO_BZIP2=1 cxxflags=-fPIC cflags=-fPIC
+      - >-
+        ./b2 install --prefix=/app
+                     --with-filesystem
+                     --with-date_time
+                     --with-regex
+                     --with-thread
+                     --with-system
+                     --with-random
+                     --with-iostreams
+                     --with-chrono
+                     --with-atomic
+                     define='BOOST_SYSTEM_NO_DEPRECATED'
+                     -sNO_BZIP2=1
+                     cxxflags=-fPIC
+                     cflags=-fPIC
     sources:
       - type: archive
         # Fixed to 1.84.0 for now because lucene++ that supports boost >= 1.85.0 has not been released yet
