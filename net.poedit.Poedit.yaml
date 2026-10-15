@@ -159,7 +159,7 @@ modules:
       - mv /app/share/applications/net.poedit.PoeditURI.desktop /app/share/applications/net.poedit.Poedit.URI.desktop
     sources:
       - type: archive
-        url: https://github.com/vslavik/poedit/releases/download/v3.9.1-oss/poedit-3.9.1.tar.gz
-        sha256: d70c45e2ee3b4c8f7b6e2f61a09d4f720b23a09aeed1c44a58a0050634f260fd
+        url: https://github.com/vslavik/poedit/releases/download/v3.10-oss/poedit-3.10.tar.gz
+        sha256: c5256fce97e92a356b5f77268fbd8fdfd27bcfcc3e9582ee622d80e75d3dc275
       - type: patch
         path: appdata.patch
